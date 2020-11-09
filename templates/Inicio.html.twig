@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Business Finder
+{% endblock %}
+
+{% block body %}
+
+    <div style="text-align: center;">
+
+        <form action="/resultado" method="post">
+            <input type="text" name="send" placeholder="What are you looking for?"><br><br>
+            <input type="submit" name="send" value="Search"><br>
+        </form>
+
+        <h4>OBS.: No campo de busca é possível buscar por: Título, Endereço, CEP,
+            Cidade, Categoria.</h4>
+
+        <h5><a href="/login">Login as Admin</a></h5>
+
+    </div>
+
+{% endblock %}

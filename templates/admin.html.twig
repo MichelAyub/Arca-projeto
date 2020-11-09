@@ -1,0 +1,19 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+<div style="text-align: right;">
+    <a href="/logout">Logout</a>
+    <br>
+</div>
+<div style="text-align: left;">
+    <h1>Business Finder - Admin</h1>
+    <br>
+</div>
+{% block body %}{% endblock %}
+{% block javascripts %}{% endblock %}
+</body>
+</html>

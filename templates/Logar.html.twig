@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Business Finder - Admin
+{% endblock %}
+
+{% block body %}
+
+<div style="text-align: center;">
+
+    <h2>Please login to access the system</h2><br>
+
+    <form action="/login" method="post">
+
+        <input type="text" name="login" placeholder="Username">
+        <br><br>
+
+        <input type="password" name="senha" placeholder="Password">
+        <br><br>
+
+        <input type="submit" name="send" value="Login">
+    </form>
+</div>
+
+{% endblock %}

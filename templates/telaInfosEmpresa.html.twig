@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Business Finder - {{ empresa.titulo }}
+{% endblock %}
+
+{% block body %}
+    <ul>
+        <h2>- {{ empresa.titulo }}</h2>
+        <h4><li>Telefone: {{ empresa.telefone }}</li></h4>
+        <h4><li>Endereço: {{ empresa.endereco }}</li></h4>
+        <h4><li>CEP: {{ empresa.cep }}</li></h4>
+        <h4><li>Cidade: {{ empresa.cidade }}</li></h4>
+        <h4><li>Estado: {{ empresa.estado }}</li></h4>
+        <h4><li>Descrição: <br>{{ empresa.descricao }}</li></h4>
+        <h4><li>Categoria:
+            {% for categoria in categorias %}
+                <br> {{ categoria }}
+            {% endfor %}
+        </li></h4>
+    </ul>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Business Finder - {{ search }}
+{% endblock %}
+
+{% block body %}
+    <h2> Results for "{{ search }}"</h2><br>
+    <ul>
+        {% for empresa in empresas %}
+            <h2><a href="/resultado/{{ empresa.id }}/">{{ empresa.id }}. {{ empresa.titulo }}</a></h2>
+            <h3><li>Cidade: {{ empresa.cidade }}</li></h3>
+            <p>_____________________________</p>
+        {% endfor %}
+    </ul>
+{% endblock %}

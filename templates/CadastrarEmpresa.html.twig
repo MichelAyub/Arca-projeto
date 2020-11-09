@@ -1,0 +1,59 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block title %}
+    Business Finder - Admin
+{% endblock %}
+
+{% block body %}
+
+    <h2>Add Business</h2>
+
+    <form action="/administrador/cadastro" method="post">
+
+        <h5>Title: <br>
+        <input type="text" name="titulo"></h5>
+
+        <h5>Phone: <br>
+            <input type="text" name="telefone"></h5>
+
+        <h5>Address: <br>
+            <input type="text" name="endereco"></h5>
+
+        <h5>Zipcode: <br>
+            <input type="text" name="cep"></h5>
+
+        <h5>City: <br>
+            <input type="text" name="cidade"></h5>
+
+        <h5>State: <br>
+            <input type="text" name="estado" maxlength="2"></h5>
+
+        <h5>Description: <br>
+            <textarea name="descricao" rows="10" cols="40"></textarea></h5>
+
+        <h5>Category: <br>
+            <input type="checkbox" name="categoria[]" value="Auto">
+            <label for="auto">Auto</label><br>
+            <input type="checkbox" name="categoria[]" value="Beauty and Fitness">
+            <label for="auto">Beauty and Fitness</label><br>
+            <input type="checkbox" name="categoria[]" value="Entertainment">
+            <label for="auto">Entertainment</label><br>
+            <input type="checkbox" name="categoria[]" value="Food and Dining">
+            <label for="auto">Food and Dining</label><br>
+            <input type="checkbox" name="categoria[]" value="Health">
+            <label for="auto">Health</label><br>
+            <input type="checkbox" name="categoria[]" value="Sports">
+            <label for="auto">Sports</label><br>
+            <input type="checkbox" name="categoria[]" value="Travel">
+            <label for="auto">Travel</label><br></h5>
+
+        <input type="submit" name="send" value="Save">
+
+    </form>
+
+
+{% endblock %}
+
+
+
+
